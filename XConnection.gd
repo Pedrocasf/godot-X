@@ -15,12 +15,11 @@ func tcp_x_connect():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var err = connection.connect_to_host("localhost", 6000);
-	tcp_x_connect()
 	if err != OK:
 		print_debug("can not connect to X server ")
 	else:
 		print_debug("connected")
-	
+	tcp_x_connect()
 	
 
 
